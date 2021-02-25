@@ -1,0 +1,7 @@
+{
+  "name": "workflow-check",
+  "files": [
+    "workflows/workflows-check/workflows-check.template.yml",
+    "libs/workflows.lib.yml"
+  ]
+}
