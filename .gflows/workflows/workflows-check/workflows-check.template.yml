@@ -2,7 +2,7 @@
 #@ load("workflows.lib.yml", "pull_request_defaults")
 name: workflows check
 
-"on": #@ pull_request_defaults(data.values.workflows_check.git)
+"on": #@ pull_request_defaults()
 
 jobs:
   check_workflows:

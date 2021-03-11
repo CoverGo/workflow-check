@@ -6,3 +6,5 @@ templates:
   defaults:
     libs:
       - workflow-configuration/workflows-check
+    dependencies:
+      - https://raw.githubusercontent.com/CoverGo/ci-workflow-libraries/v0.3/.gflows
