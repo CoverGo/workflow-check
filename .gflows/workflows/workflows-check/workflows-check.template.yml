@@ -1,17 +1,8 @@
 #@ load("@ytt:data", "data")
-#@ load("workflows.lib.yml", "pull_request_defaults")
+#@ load("common.lib.yml", "common")
 
-#@ def branches():
-#@ if hasattr(data.values,"workflows_check"):
-#@ return pull_request_defaults(data.values.workflows_check)
-#@ else:
-#@ return pull_request_defaults()
-#@ end
-#@ end
-
-name: workflows check
-
-"on": #@ branches()
+name: Workflows Check
+"on": #@ common.workflow_triggers(getattr(getattr(data.values,"workflows_check"),"git"))
 jobs:
   check_workflows:
     name: check-workflows
